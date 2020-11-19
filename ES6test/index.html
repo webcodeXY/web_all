@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="mvvm.js" type="application/javascript"></script>
 </head>
 <body>
-
+<div id="app">
+    11{{msg}}344
+    <div>
+        {{msg}}
+    </div>
+</div>
 </body>
+<script>
+    let vm = new Xvue({
+        el:"#app",
+        data:{
+            msg:"hello Xvue!"
+        }
+    })
+
+    console.log(vm)
+
+</script>
 </html>
