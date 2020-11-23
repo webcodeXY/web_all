@@ -11,17 +11,23 @@
     <div>
         {{msg}}
     </div>
+    <input v-model="modelData" /> {{modelData}}
 </div>
 </body>
 <script>
     let vm = new Xvue({
         el:"#app",
         data:{
-            msg:"hello Xvue!"
+            msg:"hello Xvue!",
+            modelData:"input"
         }
     })
 
-    console.log(vm)
+    console.log(vm);
+    setTimeout(function(){
+        vm.$options.data.msg = "vue 修改";
+        console.log(vm);
+    },2000)
 
 </script>
 </html>
