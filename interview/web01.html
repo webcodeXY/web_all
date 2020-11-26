@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值
+
+    let i = 0;
+    let num = randomNumber();
+
+    function randomArr(arr,index,num) {
+        if(arr.indexOf(num) == -1){
+            arr[index] = num;
+            index++;
+        } else {
+            num = randomNumber();
+        }
+        if(index >= arr.length){
+            console.log(arr);
+            return;
+        } else {
+            randomArr(arr,index,num);
+        }
+    }
+    function randomNumber(){
+        return Math.floor(Math.random() * 31 + 2);
+    }
+    let arr = new Array(5);
+    console.log(arr);
+    randomArr(arr,i,num);
+    
+
+</script>
+
+
+</html>
