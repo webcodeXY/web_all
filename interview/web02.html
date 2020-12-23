@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //写一个方法去掉字符串中的空格
+    let str = "  3 3242 dfg 3454  4  ";
+    // str = str.split(' ').join('');
+    str = str.replace(/^\s*|\s*$/g,""); //去除字符串内两头的空格
+    console.log(str)
+
+
+    function func(x){
+        console.log(typeof x, arguments.length);
+    }
+    func(); //==> "undefined", 0
+    func(7); //==> "number", 7
+    func("1", "2", "3"); //==> "string", 3
+</script>
+</html>

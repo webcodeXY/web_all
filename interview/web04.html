@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" type="application/javascript"></script>
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .color-cadetblue {
+            background-color: cadetblue;
+        }
+        .color-darkblue {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div :class="[{ 'color-darkblue' : flag }, 'color-cadetblue','div']" @click="clickDiv">点击</div>
+    </div>
+</body>
+
+<script>
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            flag:0,
+        },
+        methods: {
+            clickDiv(){
+                vm.flag = vm.flag == 1 ? 0 : 1;
+            }
+        }
+    })
+
+</script>
+
+</html>
