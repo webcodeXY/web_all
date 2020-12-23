@@ -17,8 +17,6 @@
             width: 200px;
             height: 200px;
             background: coral;
-
-            display: block;
             margin: 0 auto;
         }
 
@@ -37,7 +35,25 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%);
-            transtion:all 2s;
+        }
+
+        .parent3{
+            margin-top: 10px;
+            width: 600px;
+            height: 400px;
+            background: cadetblue;
+            position: relative;
+        }
+        .child3{
+            width: 200px;
+            height: 200px;
+            background: coral;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
         }
 
     </style>
@@ -49,6 +65,10 @@
 
 <div class="parent2">
     <div class="child2"></div>
+</div>
+
+<div class="parent3">
+    <div class="child3"></div>
 </div>
 
 </body>
